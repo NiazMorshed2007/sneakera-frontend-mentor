@@ -1,0 +1,21 @@
+@import url("https://fonts.googleapis.com/css2?family=Lato:wght@100;300;400;700;900&family=Roboto+Condensed:wght@300;400;700&display=swap");
+$roboto-condensed: "Roboto Condensed", sans-serif;
+@import "color";
+@import "mixin";
+@import "header";
+@import "main";
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+  padding: 0 80px;
+  font-family: "Lato", sans-serif;
+  font-family: $roboto-condensed;
+}

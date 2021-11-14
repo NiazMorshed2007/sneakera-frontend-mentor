@@ -1,0 +1,124 @@
+.main {
+  padding: 60px 40px;
+  @include flex(row);
+  align-items: center;
+  gap: 7em;
+  user-select: none;
+  .left {
+    @include flex(column);
+    .img-wrapper {
+      width: 350px;
+      height: 350px;
+      border-radius: 8px;
+      overflow: hidden;
+      .inner-img-wrapper {
+        display: inline-flex;
+        transition: all 0.4s ease-in-out;
+        img {
+          @include fitImage;
+          width: 350px;
+          height: 350px;
+        }
+      }
+    }
+    .thumbnails {
+      padding: 15px 0;
+      @include flex(row);
+      gap: 2.2em;
+      .thumbnail {
+        width: 60px;
+        height: 60px;
+        border-radius: 5px;
+        overflow: hidden;
+        border: 2px solid transparent;
+        img {
+          @include fitImage;
+        }
+      }
+      .active-thumbnail {
+        border-color: $brandClr;
+        img {
+          opacity: 0.5;
+        }
+      }
+    }
+  }
+
+  .right {
+    width: 40%;
+    // padding-bottom: 40px;
+    h4 {
+      color: rgba($color: $brandClr, $alpha: 0.9);
+      font-size: 14px;
+      letter-spacing: 2px;
+    }
+    h1 {
+      font-size: 45px;
+      line-height: 45px;
+      margin: 10px 0 20px 0;
+    }
+    .des {
+      color: silver;
+      font-weight: 300;
+      padding-bottom: 20px;
+    }
+    .price {
+      @include flex(row);
+      align-items: center;
+      gap: 1.5em;
+      padding-bottom: 8px;
+      span {
+        padding: 4px 7px;
+        border-radius: 4px;
+        background: rgba($color: $brandClr, $alpha: 0.3);
+        color: $brandClr;
+      }
+    }
+    del {
+      color: silver;
+    }
+    .footer-items {
+      @include flex(row);
+      align-items: center;
+      gap: 1.5em;
+      padding-top: 15px;
+      .counter {
+        @include flex(row);
+        align-items: center;
+        gap: 0.5em;
+        border-radius: 5px;
+        background: rgb(241, 241, 241);
+        div {
+          padding: 9px 10px;
+          font-weight: 600;
+          font-size: 17px;
+          color: rgb(66, 66, 66);
+        }
+        .oper {
+          cursor: pointer;
+          color: $brandClr;
+        }
+      }
+      button {
+        @include flex(row);
+        align-items: center;
+        gap: 0.6em;
+        justify-content: center;
+        width: 220px;
+        padding: 12px 18px;
+        border-radius: 6px;
+        outline: none;
+        border: none;
+        background: $brandClr;
+        color: white;
+        font-weight: 700;
+        cursor: pointer;
+        transition: all 0.2s ease-in-out;
+        box-shadow: 0 0 0 0 $brandClr;
+        &:active {
+          transform: scale(0.8);
+        }
+      }
+    }
+  }
+}
